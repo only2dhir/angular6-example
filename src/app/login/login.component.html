@@ -1,0 +1,26 @@
+<div class="row">
+
+  <div class="col-md-6 col-md-offset-2">
+    <h1>Login </h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" formControlName="email" id="email">
+        <div *ngIf="submitted && loginForm.controls.email.errors" class="error">
+          <div *ngIf="loginForm.controls.email.errors.required">Email is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" formControlName="password" id="pwd">
+        <div *ngIf="submitted && loginForm.controls.password.errors" class="error">
+          <div *ngIf="loginForm.controls.password.errors.required">Password is required</div>
+        </div>
+      </div>
+      <button class="btn btn-default">Login</button>
+      <div *ngIf="invalidLogin" class="error">
+        <div>Invalid credentials.</div>
+      </div>
+    </form>
+  </div>
+</div>

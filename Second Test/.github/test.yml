@@ -4,7 +4,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: A multiline script
+      - name: A multiline script by me
         run: |
           echo "Add other actions to build,"
           echo "test, and deploy your project."

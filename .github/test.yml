@@ -12,7 +12,7 @@ jobs:
       - name: Get Code
         uses: actions/checkout@v3
 
-      - name: Install angular
+      - name: Install angular on
         uses: actions/angular-github-actions
 
       - name: install dependencies
